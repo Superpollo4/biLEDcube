@@ -17,7 +17,7 @@ To accomplish it there is different stages we had to go through:
 
 Include gif or video of the outputs we get for the single anode and later full cube testing.
 
-https://i.gifer.com/KHTK.gif
+![](KHTK.gif)
 
 NOT OUR CUBE, ONLY TESTING GIF.
 
