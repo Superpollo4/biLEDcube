@@ -1,0 +1,445 @@
+GAS LISTING /tmp/ccKF6sXx.s 			page 1
+
+
+   1               		.file	"main.c"
+   2               	__SP_H__ = 0x3e
+   3               	__SP_L__ = 0x3d
+   4               	__SREG__ = 0x3f
+   5               	__tmp_reg__ = 0
+   6               	__zero_reg__ = 1
+   7               		.text
+   8               	.global	setup
+  10               	setup:
+  11               	/* prologue: function */
+  12               	/* frame size = 0 */
+  13               	/* stack size = 0 */
+  14               	.L__stack_usage = 0
+  15 0000 87E6      		ldi r24,lo8(103)
+  16 0002 90E0      		ldi r25,0
+  17 0004 0E94 0000 		call uart_init
+  18 0008 0E94 0000 		call twi_init
+  19 000c 259A      		sbi 0x4,5
+  20 000e 249A      		sbi 0x4,4
+  21 0010 239A      		sbi 0x4,3
+  22 0012 229A      		sbi 0x4,2
+  23 0014 219A      		sbi 0x4,1
+  24 0016 209A      		sbi 0x4,0
+  25 0018 579A      		sbi 0xa,7
+  26 001a 569A      		sbi 0xa,6
+  27 001c 559A      		sbi 0xa,5
+  28 001e 549A      		sbi 0xa,4
+  29 0020 539A      		sbi 0xa,3
+  30 0022 529A      		sbi 0xa,2
+  31 0024 2D98      		cbi 0x5,5
+  32 0026 2C98      		cbi 0x5,4
+  33 0028 2B98      		cbi 0x5,3
+  34 002a 2A98      		cbi 0x5,2
+  35 002c 2998      		cbi 0x5,1
+  36 002e 2898      		cbi 0x5,0
+  37 0030 5F98      		cbi 0xb,7
+  38 0032 5E98      		cbi 0xb,6
+  39 0034 5D98      		cbi 0xb,5
+  40 0036 5C9A      		sbi 0xb,4
+  41 0038 5B9A      		sbi 0xb,3
+  42 003a 5A9A      		sbi 0xb,2
+  43 003c 85B5      		in r24,0x25
+  44 003e 8560      		ori r24,lo8(5)
+  45 0040 85BD      		out 0x25,r24
+  46 0042 EEE6      		ldi r30,lo8(110)
+  47 0044 F0E0      		ldi r31,0
+  48 0046 8081      		ld r24,Z
+  49 0048 8160      		ori r24,lo8(1)
+  50 004a 8083      		st Z,r24
+  51 004c 0895      		ret
+  53               	.global	TestAnimation1
+  55               	TestAnimation1:
+  56               	/* prologue: function */
+  57               	/* frame size = 0 */
+  58               	/* stack size = 0 */
+  59               	.L__stack_usage = 0
+  60 004e 5C98      		cbi 0xb,4
+GAS LISTING /tmp/ccKF6sXx.s 			page 2
+
+
+  61 0050 5B9A      		sbi 0xb,3
+  62 0052 5A9A      		sbi 0xb,2
+  63 0054 2D9A      		sbi 0x5,5
+  64 0056 2C9A      		sbi 0x5,4
+  65 0058 2B9A      		sbi 0x5,3
+  66 005a 2A9A      		sbi 0x5,2
+  67 005c 299A      		sbi 0x5,1
+  68 005e 289A      		sbi 0x5,0
+  69 0060 5F9A      		sbi 0xb,7
+  70 0062 5E9A      		sbi 0xb,6
+  71 0064 5D9A      		sbi 0xb,5
+  72 0066 2FEF      		ldi r18,lo8(639999)
+  73 0068 83EC      		ldi r24,hi8(639999)
+  74 006a 99E0      		ldi r25,hlo8(639999)
+  75 006c 2150      	1:	subi r18,1
+  76 006e 8040      		sbci r24,0
+  77 0070 9040      		sbci r25,0
+  78 0072 01F4      		brne 1b
+  79 0074 00C0      		rjmp .
+  80 0076 0000      		nop
+  81 0078 2D98      		cbi 0x5,5
+  82 007a 2C98      		cbi 0x5,4
+  83 007c 2B98      		cbi 0x5,3
+  84 007e 2A98      		cbi 0x5,2
+  85 0080 2998      		cbi 0x5,1
+  86 0082 2898      		cbi 0x5,0
+  87 0084 5F98      		cbi 0xb,7
+  88 0086 5E98      		cbi 0xb,6
+  89 0088 5D98      		cbi 0xb,5
+  90 008a 5B98      		cbi 0xb,3
+  91 008c 5C9A      		sbi 0xb,4
+  92 008e 5A9A      		sbi 0xb,2
+  93 0090 2D9A      		sbi 0x5,5
+  94 0092 2C9A      		sbi 0x5,4
+  95 0094 2B9A      		sbi 0x5,3
+  96 0096 2A9A      		sbi 0x5,2
+  97 0098 299A      		sbi 0x5,1
+  98 009a 289A      		sbi 0x5,0
+  99 009c 5F9A      		sbi 0xb,7
+ 100 009e 5E9A      		sbi 0xb,6
+ 101 00a0 5D9A      		sbi 0xb,5
+ 102 00a2 2FEF      		ldi r18,lo8(639999)
+ 103 00a4 83EC      		ldi r24,hi8(639999)
+ 104 00a6 99E0      		ldi r25,hlo8(639999)
+ 105 00a8 2150      	1:	subi r18,1
+ 106 00aa 8040      		sbci r24,0
+ 107 00ac 9040      		sbci r25,0
+ 108 00ae 01F4      		brne 1b
+ 109 00b0 00C0      		rjmp .
+ 110 00b2 0000      		nop
+ 111 00b4 2D98      		cbi 0x5,5
+ 112 00b6 2C98      		cbi 0x5,4
+ 113 00b8 2B98      		cbi 0x5,3
+ 114 00ba 2A98      		cbi 0x5,2
+ 115 00bc 2998      		cbi 0x5,1
+ 116 00be 2898      		cbi 0x5,0
+ 117 00c0 5F98      		cbi 0xb,7
+GAS LISTING /tmp/ccKF6sXx.s 			page 3
+
+
+ 118 00c2 5E98      		cbi 0xb,6
+ 119 00c4 5D98      		cbi 0xb,5
+ 120 00c6 5A98      		cbi 0xb,2
+ 121 00c8 5C9A      		sbi 0xb,4
+ 122 00ca 5B9A      		sbi 0xb,3
+ 123 00cc 2D9A      		sbi 0x5,5
+ 124 00ce 2C9A      		sbi 0x5,4
+ 125 00d0 2B9A      		sbi 0x5,3
+ 126 00d2 2A9A      		sbi 0x5,2
+ 127 00d4 299A      		sbi 0x5,1
+ 128 00d6 289A      		sbi 0x5,0
+ 129 00d8 5F9A      		sbi 0xb,7
+ 130 00da 5E9A      		sbi 0xb,6
+ 131 00dc 5D9A      		sbi 0xb,5
+ 132 00de 2FEF      		ldi r18,lo8(639999)
+ 133 00e0 83EC      		ldi r24,hi8(639999)
+ 134 00e2 99E0      		ldi r25,hlo8(639999)
+ 135 00e4 2150      	1:	subi r18,1
+ 136 00e6 8040      		sbci r24,0
+ 137 00e8 9040      		sbci r25,0
+ 138 00ea 01F4      		brne 1b
+ 139 00ec 00C0      		rjmp .
+ 140 00ee 0000      		nop
+ 141 00f0 2D98      		cbi 0x5,5
+ 142 00f2 2C98      		cbi 0x5,4
+ 143 00f4 2B98      		cbi 0x5,3
+ 144 00f6 2A98      		cbi 0x5,2
+ 145 00f8 2998      		cbi 0x5,1
+ 146 00fa 2898      		cbi 0x5,0
+ 147 00fc 5F98      		cbi 0xb,7
+ 148 00fe 5E98      		cbi 0xb,6
+ 149 0100 5D98      		cbi 0xb,5
+ 150 0102 0895      		ret
+ 152               	.global	TestAnimation2
+ 154               	TestAnimation2:
+ 155               	/* prologue: function */
+ 156               	/* frame size = 0 */
+ 157               	/* stack size = 0 */
+ 158               	.L__stack_usage = 0
+ 159 0104 5C98      		cbi 0xb,4
+ 160 0106 5B98      		cbi 0xb,3
+ 161 0108 5A98      		cbi 0xb,2
+ 162 010a 2B9A      		sbi 0x5,3
+ 163 010c 289A      		sbi 0x5,0
+ 164 010e 5D9A      		sbi 0xb,5
+ 165 0110 2FEF      		ldi r18,lo8(1279999)
+ 166 0112 87E8      		ldi r24,hi8(1279999)
+ 167 0114 93E1      		ldi r25,hlo8(1279999)
+ 168 0116 2150      	1:	subi r18,1
+ 169 0118 8040      		sbci r24,0
+ 170 011a 9040      		sbci r25,0
+ 171 011c 01F4      		brne 1b
+ 172 011e 00C0      		rjmp .
+ 173 0120 0000      		nop
+ 174 0122 2B98      		cbi 0x5,3
+ 175 0124 2898      		cbi 0x5,0
+ 176 0126 5D98      		cbi 0xb,5
+GAS LISTING /tmp/ccKF6sXx.s 			page 4
+
+
+ 177 0128 2C9A      		sbi 0x5,4
+ 178 012a 299A      		sbi 0x5,1
+ 179 012c 5E9A      		sbi 0xb,6
+ 180 012e 2FEF      		ldi r18,lo8(1279999)
+ 181 0130 87E8      		ldi r24,hi8(1279999)
+ 182 0132 93E1      		ldi r25,hlo8(1279999)
+ 183 0134 2150      	1:	subi r18,1
+ 184 0136 8040      		sbci r24,0
+ 185 0138 9040      		sbci r25,0
+ 186 013a 01F4      		brne 1b
+ 187 013c 00C0      		rjmp .
+ 188 013e 0000      		nop
+ 189 0140 2C98      		cbi 0x5,4
+ 190 0142 2998      		cbi 0x5,1
+ 191 0144 5E98      		cbi 0xb,6
+ 192 0146 2D9A      		sbi 0x5,5
+ 193 0148 2A9A      		sbi 0x5,2
+ 194 014a 5F9A      		sbi 0xb,7
+ 195 014c 2FEF      		ldi r18,lo8(1279999)
+ 196 014e 87E8      		ldi r24,hi8(1279999)
+ 197 0150 93E1      		ldi r25,hlo8(1279999)
+ 198 0152 2150      	1:	subi r18,1
+ 199 0154 8040      		sbci r24,0
+ 200 0156 9040      		sbci r25,0
+ 201 0158 01F4      		brne 1b
+ 202 015a 00C0      		rjmp .
+ 203 015c 0000      		nop
+ 204 015e 2D98      		cbi 0x5,5
+ 205 0160 2A98      		cbi 0x5,2
+ 206 0162 5F98      		cbi 0xb,7
+ 207 0164 0895      		ret
+ 209               		.section	.rodata.str1.1,"aMS",@progbits,1
+ 210               	.LC0:
+ 211 0000 4E6F 7420 		.string	"Not connected H"
+ 211      636F 6E6E 
+ 211      6563 7465 
+ 211      6420 4800 
+ 212               	.LC1:
+ 213 0010 4E6F 7420 		.string	"Not connected T"
+ 213      636F 6E6E 
+ 213      6563 7465 
+ 213      6420 5400 
+ 214               	.LC2:
+ 215 0020 0D0A 2D2D 		.string	"\r\n---Temperature values---:\r\n"
+ 215      2D54 656D 
+ 215      7065 7261 
+ 215      7475 7265 
+ 215      2076 616C 
+ 216               	.LC3:
+ 217 003e 2E00      		.string	"."
+ 218               		.text
+ 219               	.global	fsm_twi_scanner
+ 221               	fsm_twi_scanner:
+ 222 0166 CF93      		push r28
+ 223 0168 DF93      		push r29
+ 224 016a CDB7      		in r28,__SP_L__
+ 225 016c DEB7      		in r29,__SP_H__
+GAS LISTING /tmp/ccKF6sXx.s 			page 5
+
+
+ 226 016e 6497      		sbiw r28,20
+ 227 0170 0FB6      		in __tmp_reg__,__SREG__
+ 228 0172 F894      		cli
+ 229 0174 DEBF      		out __SP_H__,r29
+ 230 0176 0FBE      		out __SREG__,__tmp_reg__
+ 231 0178 CDBF      		out __SP_L__,r28
+ 232               	/* prologue: function */
+ 233               	/* frame size = 20 */
+ 234               	/* stack size = 22 */
+ 235               	.L__stack_usage = 22
+ 236 017a 8091 0000 		lds r24,twi_state
+ 237 017e 9091 0000 		lds r25,twi_state+1
+ 238 0182 8430      		cpi r24,4
+ 239 0184 9105      		cpc r25,__zero_reg__
+ 240 0186 01F0      		breq .L6
+ 241 0188 00F4      		brsh .L7
+ 242 018a 0197      		sbiw r24,1
+ 243 018c 01F0      		breq .+2
+ 244 018e 00C0      		rjmp .L5
+ 245 0190 84E0      		ldi r24,lo8(4)
+ 246 0192 90E0      		ldi r25,0
+ 247 0194 00C0      		rjmp .L14
+ 248               	.L7:
+ 249 0196 8530      		cpi r24,5
+ 250 0198 9105      		cpc r25,__zero_reg__
+ 251 019a 01F4      		brne .+2
+ 252 019c 00C0      		rjmp .L9
+ 253 019e 0697      		sbiw r24,6
+ 254 01a0 01F0      		breq .+2
+ 255 01a2 00C0      		rjmp .L5
+ 256 01a4 80E0      		ldi r24,lo8(.LC2)
+ 257 01a6 90E0      		ldi r25,hi8(.LC2)
+ 258 01a8 0E94 0000 		call uart_puts
+ 259 01ac 8091 0000 		lds r24,Meteo_values+2
+ 260 01b0 4AE0      		ldi r20,lo8(10)
+ 261 01b2 BE01      		movw r22,r28
+ 262 01b4 655F      		subi r22,-11
+ 263 01b6 7F4F      		sbci r23,-1
+ 264 01b8 90E0      		ldi r25,0
+ 265 01ba 0E94 0000 		call __itoa_ncheck
+ 266 01be 8091 0000 		lds r24,Meteo_values+3
+ 267 01c2 4AE0      		ldi r20,lo8(10)
+ 268 01c4 BE01      		movw r22,r28
+ 269 01c6 6F5F      		subi r22,-1
+ 270 01c8 7F4F      		sbci r23,-1
+ 271 01ca 90E0      		ldi r25,0
+ 272 01cc 0E94 0000 		call __itoa_ncheck
+ 273 01d0 CE01      		movw r24,r28
+ 274 01d2 0B96      		adiw r24,11
+ 275 01d4 0E94 0000 		call uart_puts
+ 276 01d8 80E0      		ldi r24,lo8(.LC3)
+ 277 01da 90E0      		ldi r25,hi8(.LC3)
+ 278 01dc 0E94 0000 		call uart_puts
+ 279 01e0 CE01      		movw r24,r28
+ 280 01e2 0196      		adiw r24,1
+ 281 01e4 00C0      		rjmp .L15
+ 282               	.L6:
+GAS LISTING /tmp/ccKF6sXx.s 			page 6
+
+
+ 283 01e6 88EB      		ldi r24,lo8(-72)
+ 284 01e8 0E94 0000 		call twi_start
+ 285 01ec 8111      		cpse r24,__zero_reg__
+ 286 01ee 00C0      		rjmp .L12
+ 287 01f0 0E94 0000 		call twi_write
+ 288 01f4 0E94 0000 		call twi_stop
+ 289 01f8 89EB      		ldi r24,lo8(-71)
+ 290 01fa 0E94 0000 		call twi_start
+ 291 01fe 0E94 0000 		call twi_read_ack
+ 292 0202 8093 0000 		sts Meteo_values,r24
+ 293 0206 0E94 0000 		call twi_read_nack
+ 294 020a 8093 0000 		sts Meteo_values+1,r24
+ 295 020e 0E94 0000 		call twi_stop
+ 296 0212 85E0      		ldi r24,lo8(5)
+ 297 0214 90E0      		ldi r25,0
+ 298 0216 00C0      		rjmp .L14
+ 299               	.L12:
+ 300 0218 80E0      		ldi r24,lo8(.LC0)
+ 301 021a 90E0      		ldi r25,hi8(.LC0)
+ 302 021c 00C0      		rjmp .L15
+ 303               	.L9:
+ 304 021e 88EB      		ldi r24,lo8(-72)
+ 305 0220 0E94 0000 		call twi_start
+ 306 0224 8111      		cpse r24,__zero_reg__
+ 307 0226 00C0      		rjmp .L13
+ 308 0228 82E0      		ldi r24,lo8(2)
+ 309 022a 0E94 0000 		call twi_write
+ 310 022e 0E94 0000 		call twi_stop
+ 311 0232 89EB      		ldi r24,lo8(-71)
+ 312 0234 0E94 0000 		call twi_start
+ 313 0238 0E94 0000 		call twi_read_ack
+ 314 023c 8093 0000 		sts Meteo_values+2,r24
+ 315 0240 0E94 0000 		call twi_read_nack
+ 316 0244 8093 0000 		sts Meteo_values+3,r24
+ 317 0248 0E94 0000 		call twi_stop
+ 318 024c 86E0      		ldi r24,lo8(6)
+ 319 024e 90E0      		ldi r25,0
+ 320 0250 00C0      		rjmp .L14
+ 321               	.L13:
+ 322 0252 80E0      		ldi r24,lo8(.LC1)
+ 323 0254 90E0      		ldi r25,hi8(.LC1)
+ 324               	.L15:
+ 325 0256 0E94 0000 		call uart_puts
+ 326               	.L5:
+ 327 025a 81E0      		ldi r24,lo8(1)
+ 328 025c 90E0      		ldi r25,0
+ 329               	.L14:
+ 330 025e 9093 0000 		sts twi_state+1,r25
+ 331 0262 8093 0000 		sts twi_state,r24
+ 332               	/* epilogue start */
+ 333 0266 6496      		adiw r28,20
+ 334 0268 0FB6      		in __tmp_reg__,__SREG__
+ 335 026a F894      		cli
+ 336 026c DEBF      		out __SP_H__,r29
+ 337 026e 0FBE      		out __SREG__,__tmp_reg__
+ 338 0270 CDBF      		out __SP_L__,r28
+ 339 0272 DF91      		pop r29
+GAS LISTING /tmp/ccKF6sXx.s 			page 7
+
+
+ 340 0274 CF91      		pop r28
+ 341 0276 0895      		ret
+ 343               		.section	.text.startup,"ax",@progbits
+ 344               	.global	main
+ 346               	main:
+ 347               	/* prologue: function */
+ 348               	/* frame size = 0 */
+ 349               	/* stack size = 0 */
+ 350               	.L__stack_usage = 0
+ 351 0000 0E94 0000 		call setup
+ 352               	/* #APP */
+ 353               	 ;  71 "src/main.c" 1
+ 354 0004 7894      		sei
+ 355               	 ;  0 "" 2
+ 356               	/* #NOAPP */
+ 357               	.L18:
+ 358 0006 0E94 0000 		call fsm_twi_scanner
+ 359 000a 8091 0000 		lds r24,Meteo_values+2
+ 360 000e 8D31      		cpi r24,lo8(29)
+ 361 0010 00F4      		brsh .L19
+ 362 0012 0E94 0000 		call TestAnimation1
+ 363 0016 00C0      		rjmp .L18
+ 364               	.L19:
+ 365 0018 0E94 0000 		call TestAnimation2
+ 366 001c 00C0      		rjmp .L18
+ 368               		.text
+ 369               	.global	__vector_16
+ 371               	__vector_16:
+ 372 0278 1F92      		push r1
+ 373 027a 0F92      		push r0
+ 374 027c 0FB6      		in r0,__SREG__
+ 375 027e 0F92      		push r0
+ 376 0280 1124      		clr __zero_reg__
+ 377               	/* prologue: Signal */
+ 378               	/* frame size = 0 */
+ 379               	/* stack size = 3 */
+ 380               	.L__stack_usage = 3
+ 381               	/* epilogue start */
+ 382 0282 0F90      		pop r0
+ 383 0284 0FBE      		out __SREG__,r0
+ 384 0286 0F90      		pop r0
+ 385 0288 1F90      		pop r1
+ 386 028a 1895      		reti
+ 388               	.global	twi_state
+ 389               		.data
+ 392               	twi_state:
+ 393 0000 0100      		.word	1
+ 394               		.comm	Meteo_values,4,1
+ 395               		.ident	"GCC: (AVR_8_bit_GNU_Toolchain_3.6.1_1752) 5.4.0"
+ 396               	.global __do_copy_data
+ 397               	.global __do_clear_bss
+GAS LISTING /tmp/ccKF6sXx.s 			page 8
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 main.c
+     /tmp/ccKF6sXx.s:2      *ABS*:000000000000003e __SP_H__
+     /tmp/ccKF6sXx.s:3      *ABS*:000000000000003d __SP_L__
+     /tmp/ccKF6sXx.s:4      *ABS*:000000000000003f __SREG__
+     /tmp/ccKF6sXx.s:5      *ABS*:0000000000000000 __tmp_reg__
+     /tmp/ccKF6sXx.s:6      *ABS*:0000000000000001 __zero_reg__
+     /tmp/ccKF6sXx.s:10     .text:0000000000000000 setup
+     /tmp/ccKF6sXx.s:55     .text:000000000000004e TestAnimation1
+     /tmp/ccKF6sXx.s:154    .text:0000000000000104 TestAnimation2
+     /tmp/ccKF6sXx.s:221    .text:0000000000000166 fsm_twi_scanner
+     /tmp/ccKF6sXx.s:392    .data:0000000000000000 twi_state
+                            *COM*:0000000000000004 Meteo_values
+     /tmp/ccKF6sXx.s:346    .text.startup:0000000000000000 main
+     /tmp/ccKF6sXx.s:371    .text:0000000000000278 __vector_16
+
+UNDEFINED SYMBOLS
+uart_init
+twi_init
+uart_puts
+__itoa_ncheck
+twi_start
+twi_write
+twi_stop
+twi_read_ack
+twi_read_nack
+__do_copy_data
+__do_clear_bss

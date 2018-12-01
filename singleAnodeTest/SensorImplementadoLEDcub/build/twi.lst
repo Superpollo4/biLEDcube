@@ -1,0 +1,134 @@
+GAS LISTING /tmp/ccvxbFOi.s 			page 1
+
+
+   1               		.file	"twi.c"
+   2               	__SP_H__ = 0x3e
+   3               	__SP_L__ = 0x3d
+   4               	__SREG__ = 0x3f
+   5               	__tmp_reg__ = 0
+   6               	__zero_reg__ = 1
+   7               		.text
+   8               	.global	twi_init
+  10               	twi_init:
+  11               	/* prologue: function */
+  12               	/* frame size = 0 */
+  13               	/* stack size = 0 */
+  14               	.L__stack_usage = 0
+  15 0000 87B1      		in r24,0x7
+  16 0002 8F7C      		andi r24,lo8(-49)
+  17 0004 87B9      		out 0x7,r24
+  18 0006 88B1      		in r24,0x8
+  19 0008 8063      		ori r24,lo8(48)
+  20 000a 88B9      		out 0x8,r24
+  21 000c E9EB      		ldi r30,lo8(-71)
+  22 000e F0E0      		ldi r31,0
+  23 0010 8081      		ld r24,Z
+  24 0012 8C7F      		andi r24,lo8(-4)
+  25 0014 8083      		st Z,r24
+  26 0016 88E9      		ldi r24,lo8(-104)
+  27 0018 8093 B800 		sts 184,r24
+  28 001c 0895      		ret
+  30               	.global	twi_start
+  32               	twi_start:
+  33               	/* prologue: function */
+  34               	/* frame size = 0 */
+  35               	/* stack size = 0 */
+  36               	.L__stack_usage = 0
+  37 001e 94EA      		ldi r25,lo8(-92)
+  38 0020 9093 BC00 		sts 188,r25
+  39               	.L3:
+  40 0024 9091 BC00 		lds r25,188
+  41 0028 97FF      		sbrs r25,7
+  42 002a 00C0      		rjmp .L3
+  43 002c 8093 BB00 		sts 187,r24
+  44 0030 84E8      		ldi r24,lo8(-124)
+  45 0032 8093 BC00 		sts 188,r24
+  46               	.L4:
+  47 0036 8091 BC00 		lds r24,188
+  48 003a 87FF      		sbrs r24,7
+  49 003c 00C0      		rjmp .L4
+  50 003e 9091 B900 		lds r25,185
+  51 0042 987F      		andi r25,lo8(-8)
+  52 0044 9831      		cpi r25,lo8(24)
+  53 0046 01F0      		breq .L7
+  54 0048 81E0      		ldi r24,lo8(1)
+  55 004a 9034      		cpi r25,lo8(64)
+  56 004c 01F4      		brne .L5
+  57               	.L7:
+  58 004e 80E0      		ldi r24,0
+  59               	.L5:
+  60 0050 0895      		ret
+GAS LISTING /tmp/ccvxbFOi.s 			page 2
+
+
+  62               	.global	twi_write
+  64               	twi_write:
+  65               	/* prologue: function */
+  66               	/* frame size = 0 */
+  67               	/* stack size = 0 */
+  68               	.L__stack_usage = 0
+  69 0052 8093 BB00 		sts 187,r24
+  70 0056 84E8      		ldi r24,lo8(-124)
+  71 0058 8093 BC00 		sts 188,r24
+  72               	.L12:
+  73 005c 8091 BC00 		lds r24,188
+  74 0060 87FF      		sbrs r24,7
+  75 0062 00C0      		rjmp .L12
+  76               	/* epilogue start */
+  77 0064 0895      		ret
+  79               	.global	twi_read_ack
+  81               	twi_read_ack:
+  82               	/* prologue: function */
+  83               	/* frame size = 0 */
+  84               	/* stack size = 0 */
+  85               	.L__stack_usage = 0
+  86 0066 84EC      		ldi r24,lo8(-60)
+  87 0068 8093 BC00 		sts 188,r24
+  88               	.L15:
+  89 006c 8091 BC00 		lds r24,188
+  90 0070 87FF      		sbrs r24,7
+  91 0072 00C0      		rjmp .L15
+  92 0074 8091 BB00 		lds r24,187
+  93 0078 0895      		ret
+  95               	.global	twi_read_nack
+  97               	twi_read_nack:
+  98               	/* prologue: function */
+  99               	/* frame size = 0 */
+ 100               	/* stack size = 0 */
+ 101               	.L__stack_usage = 0
+ 102 007a 84E8      		ldi r24,lo8(-124)
+ 103 007c 8093 BC00 		sts 188,r24
+ 104               	.L18:
+ 105 0080 8091 BC00 		lds r24,188
+ 106 0084 87FF      		sbrs r24,7
+ 107 0086 00C0      		rjmp .L18
+ 108 0088 8091 BB00 		lds r24,187
+ 109 008c 0895      		ret
+ 111               	.global	twi_stop
+ 113               	twi_stop:
+ 114               	/* prologue: function */
+ 115               	/* frame size = 0 */
+ 116               	/* stack size = 0 */
+ 117               	.L__stack_usage = 0
+ 118 008e 84E9      		ldi r24,lo8(-108)
+ 119 0090 8093 BC00 		sts 188,r24
+ 120 0094 0895      		ret
+ 122               		.ident	"GCC: (AVR_8_bit_GNU_Toolchain_3.6.1_1752) 5.4.0"
+GAS LISTING /tmp/ccvxbFOi.s 			page 3
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 twi.c
+     /tmp/ccvxbFOi.s:2      *ABS*:000000000000003e __SP_H__
+     /tmp/ccvxbFOi.s:3      *ABS*:000000000000003d __SP_L__
+     /tmp/ccvxbFOi.s:4      *ABS*:000000000000003f __SREG__
+     /tmp/ccvxbFOi.s:5      *ABS*:0000000000000000 __tmp_reg__
+     /tmp/ccvxbFOi.s:6      *ABS*:0000000000000001 __zero_reg__
+     /tmp/ccvxbFOi.s:10     .text:0000000000000000 twi_init
+     /tmp/ccvxbFOi.s:32     .text:000000000000001e twi_start
+     /tmp/ccvxbFOi.s:64     .text:0000000000000052 twi_write
+     /tmp/ccvxbFOi.s:81     .text:0000000000000066 twi_read_ack
+     /tmp/ccvxbFOi.s:97     .text:000000000000007a twi_read_nack
+     /tmp/ccvxbFOi.s:113    .text:000000000000008e twi_stop
+
+NO UNDEFINED SYMBOLS
