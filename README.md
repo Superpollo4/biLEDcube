@@ -19,17 +19,20 @@ Include gif or video of the outputs we get for the single anode and later full c
 
 ## Components used
 
-- x27 Dual colour R/G LEDs (double anode, three pins)'\n'
+- x27 Dual colour R/G LEDs (double anode, three pins)
+
   BL-BEG204 511-353 [More information](https://www.gme.cz/led-5mm-rg-cc-45-45-50-led-beg204)
  
-- x3 SN74HC595 8-bit Shift Register 
+- x3 SN74HC595 8-bit Shift Register
+
   [Datasheet](http://www.ti.com/general/docs/lit/getliterature.tsp?genericPartNumber=sn74hc595&fileType=pdf)
   
 - x18 150-300 Ohms Resistors
+
   Current limiting. Connected to anodes of LEDs
   
 - x1 Arduino UNO microcontroller board
 
 ## Acknowledgments
 
-Code from Tomas Fryza has been used and modified for our project.
+Code from Tomas Fryza has been used and modified for our project. Link to his [gitlab respository](https://gitlab.com/tomas.fryza/avr-examples). 
