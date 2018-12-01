@@ -7,11 +7,11 @@ Carried on by Alexander J. Magnusson and Jose Cuevas
 Our goal is to have a functional 3x3x3 LED cube of Red/Green colours. The cube is supposed to change its colours and animations depending on the input data from a temperature sensor, precisely the DHT12.
 To accomplish it there is different stages we had to go through:
 
-- Learn how an LED cube works               [DONE]
-- Buy the necessary components              [DONE]
-- Build the LED cube                        [DONE]
-- Single anode testing                      [DONE]
-- Full cube testing with shift registers
+- [x] Learn how an LED cube works               
+- [x] Buy the necessary components              
+- [x] Build the LED cube                        
+- [x] Single anode testing                      
+- [ ] Full cube testing with shift registers
 
 ## Results
 
