@@ -19,7 +19,7 @@ Include gif or video of the outputs we get for the single anode and later full c
 
 ## Components used
 
-- x27 Dual colour R/G LEDs (double anode, three pins)
+- x27 Dual colour R/G LEDs (double anode, three pins)\n
   BL-BEG204 511-353 [More information](https://www.gme.cz/led-5mm-rg-cc-45-45-50-led-beg204)
  
 - x3 SN74HC595 8-bit Shift Register 
