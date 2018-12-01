@@ -1,2 +1,2 @@
-#3x3x3 dual colour LED cube project
+# 3x3x3 dual colour LED cube project
 
