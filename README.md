@@ -15,11 +15,10 @@ To accomplish it there is different stages we had to go through:
 
 ## Results
 
-Include gif or video of the outputs we get for the single anode and later full cube testing.
+Below it is shown the first test with one single anode connected. Corresponds to the code for singleAnodeTest folder.
 
-![](KHTK.gif)
+![](MuestraSingleAnode.gif)
 
-NOT OUR CUBE, ONLY TESTING GIF.
 
 ## Components used
 
