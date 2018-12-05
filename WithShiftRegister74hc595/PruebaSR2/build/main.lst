@@ -1,0 +1,135 @@
+GAS LISTING /tmp/ccrWb4lE.s 			page 1
+
+
+   1               		.file	"main.c"
+   2               	__SP_H__ = 0x3e
+   3               	__SP_L__ = 0x3d
+   4               	__SREG__ = 0x3f
+   5               	__tmp_reg__ = 0
+   6               	__zero_reg__ = 1
+   7               		.text
+   8               	.global	setup
+  10               	setup:
+  11               	/* prologue: function */
+  12               	/* frame size = 0 */
+  13               	/* stack size = 0 */
+  14               	.L__stack_usage = 0
+  15 0000 259A      		sbi 0x4,5
+  16 0002 249A      		sbi 0x4,4
+  17 0004 239A      		sbi 0x4,3
+  18 0006 229A      		sbi 0x4,2
+  19 0008 219A      		sbi 0x4,1
+  20 000a 209A      		sbi 0x4,0
+  21 000c 579A      		sbi 0xa,7
+  22 000e 569A      		sbi 0xa,6
+  23 0010 559A      		sbi 0xa,5
+  24 0012 549A      		sbi 0xa,4
+  25 0014 539A      		sbi 0xa,3
+  26 0016 529A      		sbi 0xa,2
+  27 0018 2D98      		cbi 0x5,5
+  28 001a 2C98      		cbi 0x5,4
+  29 001c 2B98      		cbi 0x5,3
+  30 001e 2A98      		cbi 0x5,2
+  31 0020 2998      		cbi 0x5,1
+  32 0022 2898      		cbi 0x5,0
+  33 0024 5F98      		cbi 0xb,7
+  34 0026 5E98      		cbi 0xb,6
+  35 0028 5D98      		cbi 0xb,5
+  36 002a 5C98      		cbi 0xb,4
+  37 002c 5B98      		cbi 0xb,3
+  38 002e 5A98      		cbi 0xb,2
+  39 0030 85B5      		in r24,0x25
+  40 0032 8560      		ori r24,lo8(5)
+  41 0034 85BD      		out 0x25,r24
+  42 0036 EEE6      		ldi r30,lo8(110)
+  43 0038 F0E0      		ldi r31,0
+  44 003a 8081      		ld r24,Z
+  45 003c 8160      		ori r24,lo8(1)
+  46 003e 8083      		st Z,r24
+  47 0040 0895      		ret
+  49               		.section	.text.startup,"ax",@progbits
+  50               	.global	main
+  52               	main:
+  53               	/* prologue: function */
+  54               	/* frame size = 0 */
+  55               	/* stack size = 0 */
+  56               	.L__stack_usage = 0
+  57 0000 0E94 0000 		call setup
+  58               	/* #APP */
+  59               	 ;  36 "src/main.c" 1
+  60 0004 7894      		sei
+GAS LISTING /tmp/ccrWb4lE.s 			page 2
+
+
+  61               	 ;  0 "" 2
+  62               	/* #NOAPP */
+  63               	.L3:
+  64 0006 00C0      		rjmp .L3
+  66               		.text
+  67               	.global	TestAnimation1
+  69               	TestAnimation1:
+  70               	/* prologue: function */
+  71               	/* frame size = 0 */
+  72               	/* stack size = 0 */
+  73               	.L__stack_usage = 0
+  74 0042 5A9A      		sbi 0xb,2
+  75 0044 2D9A      		sbi 0x5,5
+  76 0046 2C9A      		sbi 0x5,4
+  77 0048 5F9A      		sbi 0xb,7
+  78 004a 5E9A      		sbi 0xb,6
+  79 004c 2FEF      		ldi r18,lo8(1599999)
+  80 004e 89E6      		ldi r24,hi8(1599999)
+  81 0050 98E1      		ldi r25,hlo8(1599999)
+  82 0052 2150      	1:	subi r18,1
+  83 0054 8040      		sbci r24,0
+  84 0056 9040      		sbci r25,0
+  85 0058 01F4      		brne 1b
+  86 005a 00C0      		rjmp .
+  87 005c 0000      		nop
+  88 005e 2D98      		cbi 0x5,5
+  89 0060 2C98      		cbi 0x5,4
+  90 0062 2B98      		cbi 0x5,3
+  91 0064 2A98      		cbi 0x5,2
+  92 0066 2998      		cbi 0x5,1
+  93 0068 2898      		cbi 0x5,0
+  94 006a 5F98      		cbi 0xb,7
+  95 006c 5E98      		cbi 0xb,6
+  96 006e 5D98      		cbi 0xb,5
+  97 0070 5C98      		cbi 0xb,4
+  98 0072 5B98      		cbi 0xb,3
+  99 0074 5A98      		cbi 0xb,2
+ 100 0076 0895      		ret
+ 102               	.global	__vector_16
+ 104               	__vector_16:
+ 105 0078 1F92      		push r1
+ 106 007a 0F92      		push r0
+ 107 007c 0FB6      		in r0,__SREG__
+ 108 007e 0F92      		push r0
+ 109 0080 1124      		clr __zero_reg__
+ 110               	/* prologue: Signal */
+ 111               	/* frame size = 0 */
+ 112               	/* stack size = 3 */
+ 113               	.L__stack_usage = 3
+ 114               	/* epilogue start */
+ 115 0082 0F90      		pop r0
+ 116 0084 0FBE      		out __SREG__,r0
+ 117 0086 0F90      		pop r0
+ 118 0088 1F90      		pop r1
+ 119 008a 1895      		reti
+ 121               		.ident	"GCC: (AVR_8_bit_GNU_Toolchain_3.6.1_1752) 5.4.0"
+GAS LISTING /tmp/ccrWb4lE.s 			page 3
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 main.c
+     /tmp/ccrWb4lE.s:2      *ABS*:000000000000003e __SP_H__
+     /tmp/ccrWb4lE.s:3      *ABS*:000000000000003d __SP_L__
+     /tmp/ccrWb4lE.s:4      *ABS*:000000000000003f __SREG__
+     /tmp/ccrWb4lE.s:5      *ABS*:0000000000000000 __tmp_reg__
+     /tmp/ccrWb4lE.s:6      *ABS*:0000000000000001 __zero_reg__
+     /tmp/ccrWb4lE.s:10     .text:0000000000000000 setup
+     /tmp/ccrWb4lE.s:52     .text.startup:0000000000000000 main
+     /tmp/ccrWb4lE.s:69     .text:0000000000000042 TestAnimation1
+     /tmp/ccrWb4lE.s:104    .text:0000000000000078 __vector_16
+
+NO UNDEFINED SYMBOLS
