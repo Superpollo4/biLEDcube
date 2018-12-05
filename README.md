@@ -19,7 +19,7 @@ Below it is shown the first test with one single anode connected. Corresponds to
 Better recorded, you can see in the screen the change from 27ºC to 28ºC modifies the animation of the cube:
 ![](MuestraSingleAnode2.gif)
 
-[#Entire video](https://youtu.be/NmyFaFDhJ60)
+[Entire video](https://youtu.be/NmyFaFDhJ60)
 
 
 ## Components used
