@@ -16,8 +16,10 @@ To accomplish it there is different stages we had to go through:
 ## Results
 
 Below it is shown the first test with one single anode connected. Corresponds to the code for singleAnodeTest folder.
+Better recorded, you can see in the screen the change from 27ºC to 28ºC modifies the animation of the cube:
+![](MuestraSingleAnode2.gif)
 
-![](MuestraSingleAnode.gif)
+Entire video: https://youtu.be/NmyFaFDhJ60
 
 
 ## Components used
