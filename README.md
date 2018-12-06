@@ -6,7 +6,7 @@ Working code for single anode testing is in singleAnodeTesting folder.
 
 Code still working on for full 3x3x3 LED cube with Shift Registers in WithShiftRegister74hc595 folder.
 
-[Presentation](https://docs.google.com/presentation/d/18E_V4hHT8dRD3xT8ohnPbt7g9iQilgO-eGOgdoE3oGU/edit?usp=sharing)
+[Presentation online link (Google Drive)](https://docs.google.com/presentation/d/18E_V4hHT8dRD3xT8ohnPbt7g9iQilgO-eGOgdoE3oGU/edit?usp=sharing)
 
 ## Project idea
 
