@@ -1,10 +1,12 @@
 /**
   ******************************************************************************
   * @file    main.c
-  * @author  Tomas Fryza, Brno University of Technology, Czechia
+  * @author  Alexander J. Magnusson & José Cuevas, based off examples from Tomas Fryza
+  * 		 Originally from Tomas Fryza, Brno University of Technology, Czechia
   * @version V1.1
-  * @date    Oct 04, 2018
-  * @brief   Blink LED at PB5 by internal 8-bit Timer/Counter0.
+  * @date    Nov 29, 2018
+  * @brief   Light up a 3x3x3 single anode LED cube in two different animations 
+			 depending on the data received from the DHT12 temperature sensor.
   ******************************************************************************
   */
 
