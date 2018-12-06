@@ -7,3 +7,4 @@ To improve:
 - Clearness of code storage
 - Use of english for names
 - Link from initial README.md file to the different versions and results
+- Definitions of files
