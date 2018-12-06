@@ -1,6 +1,8 @@
 # 3x3x3 dual colour LED cube project
 
-Carried on by Alexander J. Magnusson and Jose Cuevas
+Carried on by Jose Cuevas Mauricio and Alexander J. Magnusson.
+Working code for single anode testing is in singleAnodeTesting folder.
+Code still working on for full 3x3x3 LED cube with Shift Registers in WithShiftRegister74hc595 folder.
 
 ## Project idea
 
